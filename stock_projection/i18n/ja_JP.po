@@ -1,0 +1,113 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* stock_projection
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-14 10:32+0000\n"
+"PO-Revision-Date: 2014-08-14 10:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_projection
+#: field:stock.projection,product_id:0
+msgid "Product"
+msgstr "製品"
+
+#. module: stock_projection
+#: model:ir.actions.act_window,name:stock_projection.action_stock_projection1
+#: model:ir.actions.act_window,name:stock_projection.action_stock_projection_wizard
+#: model:ir.model,name:stock_projection.model_stock_projection
+#: model:ir.ui.menu,name:stock_projection.menu_action_stock_projection
+#: view:stock.projection:0
+msgid "Stock Projection"
+msgstr "在庫見通し"
+
+#. module: stock_projection
+#: field:stock.move,ref2:0
+msgid "Reference"
+msgstr "参照"
+
+#. module: stock_projection
+#: field:stock.move,is_neg_bal:0
+msgid "Is Negative Balance"
+msgstr "ﾏｲﾅｽ在庫"
+
+#. module: stock_projection
+#: field:stock.move,is_out:0
+msgid "Is Outgoing"
+msgstr "出"
+
+#. module: stock_projection
+#: field:stock.move,begin_qty:0
+msgid "Begin Qty"
+msgstr "移動前数量"
+
+#. module: stock_projection
+#: model:ir.model,name:stock_projection.model_stock_move
+msgid "Stock Move"
+msgstr "在庫移動"
+
+#. module: stock_projection
+#: view:stock.projection:0
+msgid "or"
+msgstr "または"
+
+#. module: stock_projection
+#: field:stock.move,origin2:0
+msgid "Source"
+msgstr "関連ﾄﾗﾝｻﾞｸｼｮﾝ"
+
+#. module: stock_projection
+#: view:stock.move:0
+msgid "Unit of Measure"
+msgstr "単位"
+
+#. module: stock_projection
+#: view:stock.move:0
+#: field:stock.move,move_qty:0
+msgid "Move Qty"
+msgstr "Move Qty"
+
+#. module: stock_projection
+#: field:stock.projection,location_id:0
+msgid "Location"
+msgstr "保管場所"
+
+#. module: stock_projection
+#: field:stock.move,qty_available:0
+msgid "Total QOH"
+msgstr "全手持在庫"
+
+#. module: stock_projection
+#: view:stock.projection:0
+msgid "Cancel"
+msgstr "取消"
+
+#. module: stock_projection
+#: view:stock.move:0
+msgid "Moves"
+msgstr "移動"
+
+#. module: stock_projection
+#: view:stock.projection:0
+msgid "See Projection"
+msgstr "見通しを見る"
+
+#. module: stock_projection
+#: field:stock.move,is_stock_projection:0
+msgid "Is Stock Projection"
+msgstr "Is Stock Projection"
+
+#. module: stock_projection
+#: field:stock.move,projected_qty:0
+msgid "Projected Qty"
+msgstr "見通し数量"
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_stock_projection" model="ir.ui.view">
+            <field name="name">stock.projection.form</field>
+            <field name="model">stock.projection</field>
+            <field name="arch" type="xml">
+                <form string="Stock Projection" version="7.0">
+                    <group>
+                        <field name="product_id" class="oe_inline"/>
+                        <field name="location_id" class="oe_inline"/>
+                    </group>
+                    <footer>
+                        <button string="See Projection" name="stock_projection_open_window" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_stock_projection_wizard" model="ir.actions.act_window">
+            <field name="name">Stock Projection</field>
+            <field name="res_model">stock.projection</field>
+            <field name="view_id" ref="view_stock_projection"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+            action="action_stock_projection_wizard"
+            id="menu_action_stock_projection"
+            parent="stock.menu_traceability"
+            sequence="950"
+            groups="stock.group_locations"
+        />
+    </data>
+</openerp>
