@@ -23,9 +23,9 @@
     'website': 'https://www.odoo-asia.com/',
     'licence': 'AGPL-3',
     'depends': ['website_crm'],
-    'summary':"""Send notification when create lead from website form""",
-    'description': """ 
-* Send notification email to followers when Lead/Oppotunity is created submitting form from website
+    'summary':"""Send notification and remainder when submit contact form""",
+    'description': """
+Send notification and remainder when submit contact form
     """,
     'data': [
         'data/website_crm_notify_data.xml',

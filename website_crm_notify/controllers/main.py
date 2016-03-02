@@ -26,7 +26,7 @@ class WebsiteForm(openerp.addons.website_form.controllers.main.WebsiteForm):
         cr, context = request.cr, request.context
         local_context = context.copy()
         template_id = request.registry['ir.model.data'].get_object_reference(cr, SUPERUSER_ID, 'website_crm_notify', 'website_crm_notify_mail')[1]
-        mail_id = request.registry['mail.template'].send_mail(cr, SUPERUSER_ID, template_id, int(record_id), context=local_context)
+        mail_id = request.registry['mail.template'].send_mail(cr, SUPERUSER_ID, template_id, int(record_id), context=local_context, force_send=True)
 
         return record_id
 
