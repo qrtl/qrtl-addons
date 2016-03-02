@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="website_crm_notify_mail" model="mail.template">
+            <field name="name">Contact Form Notify</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="email_from">${object.company_id and object.company_id.email}</field>
+            <field name="email_to">${(object.email_from)}</field>
+            <field name="email_cc">${object.company_id and object.company_id.email},${object.team_id.user_id and object.team_id.user_id.email}</field>
+            <field name="subject">[${object.company_id and object.company_id.name}] Thanks for your inquiry: ${object.name}</field>
+            <field name="body_html"> <![CDATA[
+<p>Thanks for your contact. Your message has been sent successfully.</p>
+<p>We will get back to you shortly. If you have an emergency, do not hesitate to contact us by phone.</p>
+<p>Here are details of your inquiry:</p>
+<ul>
+<li>Your Name: ${object.contact_name}</li>
+<li>Phone Number: ${object.phone}</li>
+<li>Email ${object.email_from}</li>
+<li>Your Company: ${object.partner_name}</li>
+<li>Subject: ${object.name}</li>
+<li>Your Question: ${object.description}</li>
+</ul>
+<p>Thanks,</p>
+<pre>
+---
+${object.company_id.name or ''}
+${object.company_id.phone or ''}
+${object.company_id.email or ''}
+${object.company_id.website or ''}
+</pre>
+            ]]></field>
+        </record>
+    </data>
+</openerp>
