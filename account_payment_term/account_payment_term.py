@@ -74,13 +74,13 @@ class account_payment_term(osv.osv):
                     if not pt.month_end_cutoff:
                         if ref_date.day > pt.cutoff_date:
                             months_to_add += 1
+                    next_date = ref_date + relativedelta(months=months_to_add)
                     # identify date of the month
                     if line.month_end_pay:
-                        date = calendar.monthrange(ref_date.year,ref_date.month)[1]
+                        date = calendar.monthrange(next_date.year,next_date.month)[1]
                     else:
                         date = line.payment_date
-
-                    next_date = ref_date + relativedelta(day=date, months=months_to_add)
+                    next_date = next_date + relativedelta(day=date)
                 # up to here
 
                 result.append( (next_date.strftime('%Y-%m-%d'), amt) )
