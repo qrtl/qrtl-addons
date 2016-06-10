@@ -13,5 +13,16 @@
             </field>
         </record>
 
+        <record id="mrp_bom_line_tree_view_z160610" model="ir.ui.view">
+            <field name="model">mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_line_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="ref"/>
+                    <field name="product_qty"/>
+                </xpath>
+            </field>
+        </record>
+
     </data>
 </openerp>

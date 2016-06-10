@@ -22,4 +22,4 @@ from openerp import models, fields, api, _
 class MrpBomLine(models.Model):
     _inherit = 'mrp.bom.line'
 
-    ref = fields.Char('Reference')
+    ref = fields.Char('Reference Number')
