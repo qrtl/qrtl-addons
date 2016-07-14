@@ -22,7 +22,9 @@
     'version': '9.0.0.5.0',
     'category': 'Extra Tools',
     'description': """
-* Installas and overrides translation by scheduler.
+* Installs and overrides translation by scheduler.
+* This module is intended to be used in a demo environment whose codebase \
+gets updated periodically (you want to show the latest translation).
     """,
     'author': 'Rooms For (Hong Kong) Limited T/A OSCG',
     'license': 'AGPL-3',
