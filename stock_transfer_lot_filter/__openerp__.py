@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #    Odoo, Open Source Management Solution
-#    Copyright (C) 2015 Rooms For (Hong Kong) Limited T/A OSCG
+#    Copyright (C) 2015-2016 Rooms For (Hong Kong) Limited T/A OSCG
 #    <https://www.odoo-asia.com>
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 
 {
     'name': 'Lot Filtering in Stock Transfer',
-    'version': '8.0.0.9.0',
+    'version': '8.0.1.0.0',
     'category': 'Stock',
     'description': """
 * Adds a new function field 'lot_balance' to stock.production.lot for filtering purpose.
