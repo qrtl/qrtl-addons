@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record model="ir.ui.view" id="view_event_form_z160723">
+        <field name="name">event.event.form.z160723</field>
+        <field name="model">event.event</field>
+        <field name="inherit_id" ref="event.view_event_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet/notebook/page/group[1]/group[1]" position="after">
+                <group>
+                    <field name="show_registration"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+ </data>
+</openerp>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="event_description_full_z160723" inherit_id="website_event.event_description_full">
+        <xpath expr="//t[@t-call='website_event.registration_template']" position="replace">
+            <t t-if="event.show_registration">
+                <t t-call="website_event.registration_template"/>
+            </t>
+        </xpath>
+    </template>
+
+</data>
+</openerp>
