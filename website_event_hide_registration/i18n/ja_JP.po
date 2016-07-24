@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_event_hide_registration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-24 03:39+0000\n"
+"PO-Revision-Date: 2016-07-24 03:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_event_hide_registration
+#: model:ir.model,name:website_event_hide_registration.model_event_event
+msgid "Event"
+msgstr "イベント"
+
+#. module: website_event_hide_registration
+#: model:ir.model.fields,field_description:website_event_hide_registration.field_event_event_show_registration
+msgid "Show Registration"
+msgstr "参加登録セクションを表示"
+
+
