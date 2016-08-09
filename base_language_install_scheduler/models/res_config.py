@@ -35,7 +35,6 @@ class base_config_settings(osv.TransientModel):
 
     def get_default_lang(self, cr, uid, ids, context=None):
         icp = self.pool.get('ir.config_parameter')
-        # we use safe_eval on the result, since the value of the parameter is a nonempty string
         return {
             'default_lang': safe_eval(icp.get_param(cr, uid, 'base_language_install.default_lang', 'False')),
         }
@@ -43,5 +42,4 @@ class base_config_settings(osv.TransientModel):
     def set_default_lang(self, cr, uid, ids, context=None):
         config = self.browse(cr, uid, ids[0], context=context)
         icp = self.pool.get('ir.config_parameter')
-        # we store the repr of the values, since the value of the parameter is a required string
         icp.set_param(cr, uid, 'base_language_install.default_lang', repr(config.default_lang))
