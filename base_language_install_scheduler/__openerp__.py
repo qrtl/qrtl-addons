@@ -19,7 +19,7 @@
 {
     'name': 'Language Install Scheduler',
     'summary': '',
-    'version': '9.0.0.5.0',
+    'version': '9.0.0.6.0',
     'category': 'Extra Tools',
     'description': """
 * Installs and overrides translation by scheduler.
@@ -28,9 +28,9 @@ gets updated periodically (you want to show the latest translation).
     """,
     'author': 'Rooms For (Hong Kong) Limited T/A OSCG',
     'license': 'AGPL-3',
-    'depends': ["base"],
+    'depends': ["base_setup"],
     'data': [
-        'views/base_language_install_view.xml',
+        'views/res_config_view.xml',
         'data/base_language_install_data.xml',
     ],
     'installable': True,

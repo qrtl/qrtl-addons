@@ -17,3 +17,4 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from . import base_language_install
+from . import res_config
