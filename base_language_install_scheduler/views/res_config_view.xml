@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_general_configuration_z160809" model="ir.ui.view">
+            <field name="name">view.general.configuration.z160809</field>
+            <field name="model">base.config.settings</field>
+            <field name="inherit_id" ref="base_setup.view_general_configuration"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='google']" position="before">
+                    <group name="default_lang">
+                        <label for="id" string="Default Language"/>
+                        <div name="group_default_lang">
+                            <field name="default_lang" class="oe_inline"/>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
