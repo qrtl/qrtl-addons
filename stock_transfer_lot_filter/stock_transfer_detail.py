@@ -26,6 +26,13 @@ class stock_transfer_details(models.TransientModel):
     def wizard_view(self):
         picking_id = self.env.context.get('active_id')
         code = self.env['stock.picking'].browse(picking_id).picking_type_id.code
+        if not code:
+            dest_loc_id = self.env.context.get('default_destinationloc_id', False)
+            src_loc_id = self.env.context.get('default_sourceloc_id', False)
+            dest_loc = self.env['stock.location'].browse(dest_loc_id)
+            src_loc = self.env['stock.location'].browse(src_loc_id)
+            if dest_loc.usage == 'internal' and src_loc.usage == 'supplier':
+                code = 'incoming'
         if code == 'incoming':
             view = self.env.ref('stock.view_stock_enter_transfer_details')
         else:

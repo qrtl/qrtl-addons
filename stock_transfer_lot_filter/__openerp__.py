@@ -18,7 +18,7 @@
 
 {
     'name': 'Lot Filtering in Stock Transfer',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.1.0',
     'category': 'Stock',
     'description': """
 * Adds a new function field 'lot_balance' to stock.production.lot for filtering purpose.
