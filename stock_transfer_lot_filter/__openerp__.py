@@ -18,11 +18,13 @@
 
 {
     'name': 'Lot Filtering in Stock Transfer',
-    'version': '8.0.1.1.0',
+    'version': '8.0.1.1.1',
     'category': 'Stock',
     'description': """
-* Adds a new function field 'lot_balance' to stock.production.lot for filtering purpose.
-* Limits lot/serial number selection to ones with inventory balance larger than zero (except for incoming picking).
+* Adds a new function field 'lot_balance' to stock.production.lot for filtering
+purpose.
+* Limits lot/serial number selection to ones with inventory balance larger than
+zero (except for incoming picking).
      """,
     'author': 'Rooms For (Hong Kong) Limited T/A OSCG',
     'website': 'https://www.odoo-asia.com',
@@ -35,6 +37,6 @@
     ],
     'installable': True,
     'application': False,
-    'auto_install': False, 
+    'auto_install': False,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

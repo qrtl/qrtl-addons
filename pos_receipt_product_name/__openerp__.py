@@ -18,11 +18,14 @@
 
 {
     'name': 'POS Receipt Product Name',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.0.1',
     'category': 'Point of Sale',
     'description': """
-* Add a field called 'POS Product Name' to keep the product names presentable on POS receipt printed through PosBox. (As of 26 Oct 2014, PosBox does not handle double-byte Japanese characters)
-* This module only handles the part that adds a field in product; receipt design is updated separately
+* Add a field called 'POS Product Name' to keep the product names presentable
+on POS receipt printed through PosBox. (As of 26 Oct 2014, PosBox does not
+handle double-byte Japanese characters)
+* This module only handles the part that adds a field in product; receipt
+design is updated separately
     """,
     'author': 'Rooms For (Hong Kong) Limited T/A OSCG',
     'website': 'https://www.odoo-asia.com',
@@ -35,6 +38,6 @@
     ],
     'installable': True,
     'application': False,
-    'auto_install': False, 
+    'auto_install': False,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

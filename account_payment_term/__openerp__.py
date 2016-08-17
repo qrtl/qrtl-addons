@@ -18,8 +18,9 @@
 
 {
     'name': 'Payment Term Enhanced',
-    'summary': 'Adds an option of better handling cutoff date and proposal of due date',
-    'version': '8.0.1.0.0',
+    'summary': 'Adds an option of better handling cutoff date and proposal of \
+            due date',
+    'version': '8.0.1.0.1',
     'category': 'Accounting',
     'description': """
 * Adds Cutoff Date field in Payment Term
@@ -27,7 +28,7 @@
     """,
     'author': 'hiro TAKADA, Rooms For (Hong Kong) Limited T/A OSCG',
     'license': 'AGPL-3',
-    'depends': ["account"], 
+    'depends': ["account"],
     'data': [
         'account_payment_term.xml',
     ],

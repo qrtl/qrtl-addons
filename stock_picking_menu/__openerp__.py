@@ -18,7 +18,7 @@
 
 {
     'name': 'Stock Picking Menu',
-    'version': '8.0.0.6.0',
+    'version': '8.0.0.6.1',
     'category': 'Menu',
     'description': """
 * Adds menu items for users to reach picking operation screens quickly.
@@ -33,6 +33,6 @@
     ],
     'installable': True,
     'application': False,
-    'auto_install': False, 
+    'auto_install': False,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

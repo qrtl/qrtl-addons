@@ -16,7 +16,7 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from openerp.osv import fields, osv
+from openerp.osv import osv
 
 
 class stock_picking(osv.osv):
@@ -31,8 +31,9 @@ class stock_picking(osv.osv):
         else:
             PickingType = self.pool.get('stock.picking.type')
             if context.get('default_picking_type_code', False):
-                return PickingType.search(cr, uid,
-                    [('code','=',context['default_picking_type_code'])],
+                return PickingType.search(
+                    cr, uid,
+                    [('code', '=', context['default_picking_type_code'])],
                     order='id')[0]
             else:
                 return False
