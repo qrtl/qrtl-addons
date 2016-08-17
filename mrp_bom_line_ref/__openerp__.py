@@ -19,10 +19,11 @@
 {
     'name': 'MRP BOM Line Reference',
     'summary': '',
-    'version': '8.0.0.5.0',
+    'version': '8.0.0.5.1',
     'category': 'Manufacturing',
     'description': """
-* Adds `Reference` field in BOM line (expected to be used to keep mapping reference for parts in circuit diagram).
+* Adds `Reference` field in BOM line (expected to be used to keep mapping
+reference for parts in circuit diagram).
     """,
     'author': 'Rooms For (Hong Kong) Limited T/A OSCG',
     'license': 'AGPL-3',
