@@ -70,7 +70,7 @@ class account_payment_term(osv.osv):
                 else:
                     ref_date = datetime.strptime(date_ref, '%Y-%m-%d')
 
-                    # identify number of months to add 
+                    # identify number of months to add
                     months_to_add = line.months_added
                     if not pt.month_end_cutoff:
                         if ref_date.day > pt.cutoff_date:
