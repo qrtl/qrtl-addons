@@ -16,23 +16,26 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from openerp import models, fields, api, _
+from openerp import models, fields, api
 
 
 class stock_production_lot(models.Model):
     _inherit = 'stock.production.lot'
-    
+
     @api.one
-    @api.depends('product_id','ref','quant_ids.qty','quant_ids.location_id')
+    @api.depends('product_id', 'ref', 'quant_ids.qty', 'quant_ids.location_id')
     def _compute_balance(self):
-        int_loc_ids = self.env['stock.location'].search([('usage','=','internal')])
+        int_loc_ids = self.env['stock.location'].search([('usage', '=',
+                'internal')])
         location_ids = [loc.id for loc in int_loc_ids]
-        quant_ids = self.env['stock.quant'].search([('lot_id','=',self.id), ('product_id','=',self.product_id.id), ('location_id','in',location_ids)])
+        quant_ids = self.env['stock.quant'].search([('lot_id', '=', self.id),
+                ('product_id', '=', self.product_id.id),
+                ('location_id', 'in', location_ids)])
         for quant in quant_ids:
             self.lot_balance += quant.qty
-            
+
     lot_balance = fields.Float(string='Lot Qty on Hand',
-        store=True, readonly=True, compute='_compute_balance')
+            store=True, readonly=True, compute='_compute_balance')
 
     def init(self, cr):
         # update lot_balance field when installing

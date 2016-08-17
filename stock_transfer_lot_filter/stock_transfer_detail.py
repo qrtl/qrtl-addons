@@ -25,10 +25,13 @@ class stock_transfer_details(models.TransientModel):
     @api.multi
     def wizard_view(self):
         picking_id = self.env.context.get('active_id')
-        code = self.env['stock.picking'].browse(picking_id).picking_type_id.code
+        code = self.env['stock.picking'].browse(picking_id).picking_type_id.\
+                code
         if not code:
-            dest_loc_id = self.env.context.get('default_destinationloc_id', False)
-            src_loc_id = self.env.context.get('default_sourceloc_id', False)
+            dest_loc_id = self.env.context.get('default_destinationloc_id',
+                    False)
+            src_loc_id = self.env.context.get('default_sourceloc_id',
+                    False)
             dest_loc = self.env['stock.location'].browse(dest_loc_id)
             src_loc = self.env['stock.location'].browse(src_loc_id)
             if dest_loc.usage == 'internal' and src_loc.usage == 'supplier':
@@ -36,7 +39,8 @@ class stock_transfer_details(models.TransientModel):
         if code == 'incoming':
             view = self.env.ref('stock.view_stock_enter_transfer_details')
         else:
-            view = self.env.ref('stock_transfer_lot_filter.view_stock_enter_transfer_details_z1')
+            view = self.env.ref('stock_transfer_lot_filter.\
+                    view_stock_enter_transfer_details_z1')
 
         return {
             'name': _('Enter transfer details'),
