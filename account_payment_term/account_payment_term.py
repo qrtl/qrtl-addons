@@ -19,11 +19,13 @@
 import logging
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+import time
 
 from openerp.osv import fields, osv
 import calendar
 
 _logger = logging.getLogger(__name__)
+
 
 class account_payment_term(osv.osv):
     _inherit = 'account.payment.term'
@@ -53,14 +55,15 @@ class account_payment_term(osv.osv):
                 amt = round(amount, prec)
             if amt:
                 if not pt.monthly_cutoff:
-                    next_date = (datetime.strptime(date_ref, '%Y-%m-%d') +
-                            relativedelta(days=line.days))
+                    next_date = (
+                        datetime.strptime(date_ref, '%Y-%m-%d') +
+                        relativedelta(days=line.days))
                     if line.days2 < 0:
                         # get 1st of next month
                         next_first_date = next_date + \
-                                relativedelta(day=1, months=1)
+                            relativedelta(day=1, months=1)
                         next_date = next_first_date + \
-                                relativedelta(days=line.days2)
+                            relativedelta(days=line.days2)
                     if line.days2 > 0:
                         next_date += relativedelta(day=line.days2, months=1)
                 # additional code is here
@@ -75,8 +78,9 @@ class account_payment_term(osv.osv):
                     next_date = ref_date + relativedelta(months=months_to_add)
                     # identify date of the month
                     if line.month_end_pay:
-                        date = calendar.monthrange(next_date.year,
-                                next_date.month)[1]
+                        date = calendar.monthrange(
+                            next_date.year,
+                            next_date.month)[1]
                     else:
                         date = line.payment_date
                     next_date = next_date + relativedelta(day=date)
@@ -85,10 +89,10 @@ class account_payment_term(osv.osv):
                 result.append((next_date.strftime('%Y-%m-%d'), amt))
                 amount -= amt
 
-        amount = reduce(lambda x,y: x+y[1], result, 0.0)
+        amount = reduce(lambda x, y: x+y[1], result, 0.0)
         dist = round(value-amount, prec)
         if dist:
-            result.append( (time.strftime('%Y-%m-%d'), dist))
+            result.append((time.strftime('%Y-%m-%d'), dist))
         return result
 
     def _check_cutoff_date(self, cr, uid, ids, context=None):
@@ -107,8 +111,9 @@ class account_payment_term(osv.osv):
 class account_payment_term_line(osv.osv):
     _inherit = 'account.payment.term.line'
     _columns = {
-        'monthly_cutoff': fields.related('payment_id', 'monthly_cutoff',
-                type='boolean', string='Monthly Cutoff'),
+        'monthly_cutoff': fields.related(
+            'payment_id', 'monthly_cutoff',
+            type='boolean', string='Monthly Cutoff'),
         'months_added': fields.integer('Months to Add'),
         'month_end_pay': fields.boolean('Payment at Month End'),
         'payment_date': fields.integer('Payment Date'),
@@ -121,7 +126,7 @@ class account_payment_term_line(osv.osv):
         if ids['monthly_cutoff']:
             return True
         return False
-    
+
     _defaults = {
         'monthly_cutoff': _get_monthly_cutoff,
         'month_added': 1,

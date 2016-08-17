@@ -16,22 +16,21 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from openerp import models, fields, api, _
+from openerp import models, api, _
 
 
 class stock_transfer_details(models.TransientModel):
     _inherit = 'stock.transfer_details'
-    
+
     @api.multi
     def wizard_view(self):
         picking_id = self.env.context.get('active_id')
         code = self.env['stock.picking'].browse(picking_id).picking_type_id.\
-                code
+            code
         if not code:
             dest_loc_id = self.env.context.get('default_destinationloc_id',
-                    False)
-            src_loc_id = self.env.context.get('default_sourceloc_id',
-                    False)
+                                               False)
+            src_loc_id = self.env.context.get('default_sourceloc_id', False)
             dest_loc = self.env['stock.location'].browse(dest_loc_id)
             src_loc = self.env['stock.location'].browse(src_loc_id)
             if dest_loc.usage == 'internal' and src_loc.usage == 'supplier':
