@@ -1,24 +1,9 @@
 # -*- coding: utf-8 -*-
-#    Odoo, Open Source Management Solution
-#    Copyright (C) 2015-2016 Rooms For (Hong Kong) Limited T/A OSCG
-#    <https://www.odoo-asia.com>
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+# Copyright 2015-2017 Rooms For (Hong Kong) Limited T/A OSCG
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     'name': 'Lot Filtering in Stock Transfer',
-    'version': '8.0.1.1.1',
+    'version': '8.0.1.1.2',
     'category': 'Stock',
     'description': """
 * Adds a new function field 'lot_balance' to stock.production.lot for filtering
@@ -33,10 +18,9 @@ zero (except for incoming picking).
         "stock",
     ],
     'data': [
-        'stock_transfer_details.xml',
+        'views/stock_transfer_details.xml',
     ],
     'installable': True,
     'application': False,
     'auto_install': False,
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
