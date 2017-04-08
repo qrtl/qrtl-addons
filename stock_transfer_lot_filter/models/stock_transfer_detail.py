@@ -22,11 +22,10 @@ class stock_transfer_details(models.TransientModel):
             if dest_loc.usage == 'internal' and src_loc.usage == 'supplier':
                 code = 'incoming'
         if code == 'incoming':
-            view = self.env.ref('stock.view_stock_enter_transfer_details')
+            ext_id = 'stock.view_stock_enter_transfer_details'
         else:
-            view = self.env.ref(
-                'stock_transfer_lot_filter.'
-                'view_stock_enter_transfer_details_z1')
+            ext_id = 'stock_transfer_lot_filter.view_stock_enter_transfer_details_z1'
+        view = self.env.ref(ext_id)
 
         return {
             'name': _('Enter transfer details'),
