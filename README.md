@@ -1,1 +1,2 @@
-# quartile-addons
+Quartile Limited Odoo-Addons
+============================
