@@ -14,6 +14,7 @@ and frontend.
     """,
     'summary': "",
     'depends': [
+        'portal',
         'website_sale',
     ],
     'data': [
