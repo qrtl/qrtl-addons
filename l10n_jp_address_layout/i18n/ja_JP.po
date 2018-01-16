@@ -77,12 +77,12 @@ msgstr "都道府県/州"
 #: model:ir.ui.view,arch_db:l10n_jp_address_layout.portal_my_details
 #: model:ir.ui.view,arch_db:l10n_jp_address_layout.website_sale_address
 msgid "State / Province"
-msgstr "都道府県"
+msgstr "都道府県/州"
 
 #. module: l10n_jp_address_layout
 #: model:ir.ui.view,arch_db:l10n_jp_address_layout.website_sale_address
 msgid "State / Province..."
-msgstr "都道府県"
+msgstr "都道府県/州"
 
 #. module: l10n_jp_address_layout
 #: model:ir.ui.view,arch_db:l10n_jp_address_layout.portal_my_details
