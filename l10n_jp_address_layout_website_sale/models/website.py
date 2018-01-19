@@ -12,9 +12,11 @@ class Website(models.Model):
     def get_default_country_id(self):
         country_id = self.env["ir.config_parameter"].sudo().get_param(
             'l10n_jp_address_layout_website_sale.default_country_id')
-        if not country_id:
+        if not country_id.isdigit():
             country_code = request.session['geoip'].get('country_code')
             if country_code:
-                country_id = request.env['res.country'].search(
+                res_country = request.env['res.country'].search(
                     [('code', '=', country_code)], limit=1)
+                if res_country:
+                    country_id = str(res_country.id)
         return country_id
