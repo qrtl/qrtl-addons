@@ -72,12 +72,15 @@
                     <input type="text" name="street2" class="form-control" t-att-value="'street2' in checkout and checkout['street2']" />
                 </div>
                 <div class="clearfix" />
+                <t t-set="default_country_id"
+                   t-value="(country and country.id) or (website.get_default_country_id().isdigit() and int(website.get_default_country_id()))"/>
                 <div t-attf-class="form-group #{error.get('country_id') and 'has-error' or ''} col-md-6 div_country">
                     <label class="control-label" for="country_id">Country</label>
                     <select id="country_id" name="country_id" class="form-control">
                         <option value="">Country...</option>
                         <t t-foreach="countries" t-as="c">
-                            <option t-att-value="c.id" t-att-selected="c.id == (country and country.id or -1)">
+                            <option t-att-value="c.id"
+                                    t-att-selected="c.id == default_country_id">
                                 <t t-esc="c.name" />
                             </option>
                         </t>
@@ -109,7 +112,7 @@
         <xpath expr="//label[@for='city']/parent::*" position="replace"/>
         <xpath expr="//label[@for='zipcode']/parent::*" position="replace"/>
         <xpath expr="//label[@for='state_id']/parent::*" position="replace"/>
-        <xpath expr="//label[@for='country_id']/parent::*" position="before">
+        <xpath expr="//label[@for='country_id']/parent::*" position="replace">
             <div t-attf-class="form-group #{error.get('zip') and 'has-error' or ''} col-lg-8">
                 <label class="control-label" for="zipcode">Zip / Postal Code</label>
                 <input type="text" name="zipcode" class="form-control" t-att-value="zipcode or partner.zip" />
@@ -132,6 +135,20 @@
             <div t-attf-class="form-group #{error.get('street') and 'has-error' or ''} col-lg-12">
                 <label class="control-label" for="street">Street</label>
                 <input type="text" name="street" class="form-control" t-att-value="street or partner.street"/>
+            </div>
+            <t t-set="default_country_id"
+               t-value="partner.country_id.id or (website.get_default_country_id().isdigit() and int(website.get_default_country_id()))"/>
+            <div t-attf-class="form-group #{error.get('country_id') and 'has-error' or ''} col-lg-6">
+                <label class="control-label" for="country_id">Country</label>
+                <select name="country_id" class="form-control">
+                    <option value="">Country...</option>
+                    <t t-foreach="countries or []" t-as="country">
+                        <option t-att-value="country.id"
+                                t-att-selected="country.id == default_country_id">
+                            <t t-esc="country.name" />
+                        </option>
+                    </t>
+                </select>
             </div>
         </xpath>
     </template>
