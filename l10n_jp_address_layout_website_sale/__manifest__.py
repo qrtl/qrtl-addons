@@ -14,7 +14,8 @@ The following default address input form are change:
 1. 「My Account」→ 「Change Details」 
 2. During the checkout process, 「Shipping & Billing」
 
-The module also adds a new website configuration (General Settings → Website) to define a default country value for the website form.
+The module also adds a new website configuration (General Settings →
+Website) to define a default country value for the website form.
 
 If you have any inquiries, please free feel to contact us via info@quartile.co 
     """,
