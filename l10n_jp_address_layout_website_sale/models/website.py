@@ -8,11 +8,11 @@ from odoo import models
 
 class Website(models.Model):
     _inherit = 'website'
-    
+
     def get_default_country_id(self):
         country_id = self.env["ir.config_parameter"].sudo().get_param(
             'l10n_jp_address_layout_website_sale.default_country_id')
-        if not country_id.isdigit():
+        if not country_id or (country_id and not country_id.isdigit()):
             country_code = request.session['geoip'].get('country_code')
             if country_code:
                 res_country = request.env['res.country'].search(
