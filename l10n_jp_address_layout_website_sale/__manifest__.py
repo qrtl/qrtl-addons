@@ -11,6 +11,7 @@
     'description': """
 This module provides the Japan address input field layout in E-commerce.
 The following default address input form are change:
+
 1. 「My Account」→ 「Change Details」 
 2. During the checkout process, 「Shipping & Billing」
 
