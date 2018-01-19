@@ -73,7 +73,7 @@
                 </div>
                 <div class="clearfix" />
                 <t t-set="default_country_id"
-                   t-value="(country and country.id) or (website.get_default_country_id().isdigit() and int(website.get_default_country_id()))"/>
+                   t-value="(country and country.id) or (website.get_default_country_id() and website.get_default_country_id().isdigit() and int(website.get_default_country_id()))"/>
                 <div t-attf-class="form-group #{error.get('country_id') and 'has-error' or ''} col-md-6 div_country">
                     <label class="control-label" for="country_id">Country</label>
                     <select id="country_id" name="country_id" class="form-control">
@@ -137,7 +137,7 @@
                 <input type="text" name="street" class="form-control" t-att-value="street or partner.street"/>
             </div>
             <t t-set="default_country_id"
-               t-value="partner.country_id.id or (website.get_default_country_id().isdigit() and int(website.get_default_country_id()))"/>
+               t-value="partner.country_id.id or (website.get_default_country_id() and website.get_default_country_id().isdigit() and int(website.get_default_country_id()))"/>
             <div t-attf-class="form-group #{error.get('country_id') and 'has-error' or ''} col-lg-6">
                 <label class="control-label" for="country_id">Country</label>
                 <select name="country_id" class="form-control">
