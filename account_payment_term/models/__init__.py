@@ -16,23 +16,4 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-{
-    'name': 'Payment Term Enhanced',
-    'summary': 'Adds an option of better handling cutoff date and proposal of \
-            due date',
-    'version': '8.0.1.0.1',
-    'category': 'Accounting',
-    'description': """
-* Adds Cutoff Date field in Payment Term
-* Handles month-end date designation for both Cutoff Date and Due Date
-    """,
-    'author': 'hiro TAKADA, Rooms For (Hong Kong) Limited T/A OSCG',
-    'license': 'AGPL-3',
-    'depends': ["account"],
-    'data': [
-        'account_payment_term.xml',
-    ],
-    'installable': True,
-    'application': False,
-    'auto_install': False,
-}
+from . import account_payment_term

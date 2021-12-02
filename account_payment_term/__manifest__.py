@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #    Odoo, Open Source Management Solution
 #    Copyright (C) 2014 - hiro TAKADA. All Rights Reserved
 #    @author hiro TAKADA <hiro@thdo.biz>
@@ -15,4 +16,19 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from . import models
+{
+    'name': 'Payment Term Enhanced',
+    'summary': 'Adds an option of better handling cutoff date and proposal of \
+            due date',
+    'version': '12.0.1.0.1',
+    'category': 'Accounting',
+    'author': 'hiro TAKADA, Rooms For (Hong Kong) Limited T/A OSCG',
+    'license': 'AGPL-3',
+    'depends': ["account"],
+    'data': [
+        'views/account_payment_term.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}
