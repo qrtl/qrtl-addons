@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_crm_notify
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-17 06:58+0000\n"
+"PO-Revision-Date: 2018-02-17 06:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_crm_notify
+#: model:mail.template,body_html:website_crm_notify.website_crm_notify_mail
+msgid " \n"
+"<p>Thank you for contacting us.</p>\n"
+"<p>We will get back to you shortly. If you need urgent help, please do not hesitate to contact us by phone.</p>\n"
+"<p>Your inquiry details:</p>\n"
+"<ul>\n"
+"<li>Your Name: ${object.contact_name}</li>\n"
+"<li>Phone Number: ${object.phone}</li>\n"
+"<li>Email ${object.email_from}</li>\n"
+"<li>Company: ${object.partner_name}</li>\n"
+"<li>Subject: ${object.name}</li>\n"
+"<li>Content: ${object.description}</li>\n"
+"</ul>\n"
+"<p>Best Regards,</p>\n"
+"---<br>\n"
+"${object.company_id.name or ''}<br>\n"
+"${object.company_id.phone or ''}<br>\n"
+"${object.company_id.email or ''}<br>\n"
+"${object.company_id.website or ''}\n"
+"        "
+msgstr " \n"
+"<p>お問い合わせいただき、ありがとうございます。</p>\n"
+"<p>内容確認の上返信差し上げますので、今しばらくお待ち願います。緊急のご用件の場合は、お電話でご連絡ください。</p>\n"
+"<p>お問い合わせ詳細:</p>\n"
+"<ul>\n"
+"<li>お名前: ${object.contact_name}</li>\n"
+"<li>電話: ${object.phone}</li>\n"
+"<li>Eメール ${object.email_from}</li>\n"
+"<li>会社/組織: ${object.partner_name}</li>\n"
+"<li>件名: ${object.name}</li>\n"
+"<li>内容: ${object.description}</li>\n"
+"</ul>\n"
+"---<br>\n"
+"${object.company_id.name or ''}<br>\n"
+"${object.company_id.phone or ''}<br>\n"
+"${object.company_id.email or ''}<br>\n"
+"${object.company_id.website or ''}\n"
+"        "
+
+#. module: website_crm_notify
+#: model:mail.template,subject:website_crm_notify.website_crm_notify_mail
+msgid "[${object.company_id and object.company_id.name}] Thanks for your inquiry: ${object.name}"
+msgstr "[${object.company_id and object.company_id.name}] お問い合わせありがとうございます: ${object.name}"
+
