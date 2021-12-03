@@ -4,7 +4,7 @@
 {
     'name': 'Website CRM Notification',
     'category': 'Website',
-    'version': '10.0.1.0.0',
+    'version': '12.0.1.0.0',
     'author': 'Quartile Limited',
     'website': 'https://www.quartile.co/',
     'licence': 'AGPL-3',
