@@ -16,4 +16,21 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from . import models
+{
+    'name': 'MRP BOM Line Reference',
+    'summary': '',
+    'version': '12.0.1.0.0',
+    'category': 'Manufacturing',
+    'description': """
+* Adds `Reference` field in BOM line (expected to be used to keep mapping reference for parts in circuit diagram).
+    """,
+    'author': 'Rooms For (Hong Kong) Limited T/A OSCG',
+    'license': 'AGPL-3',
+    'depends': ["mrp"],
+    'data': [
+        'views/mrp_view.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

@@ -16,21 +16,10 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-{
-    'name': 'MRP BOM Line Reference',
-    'summary': '',
-    'version': '9.0.0.5.0',
-    'category': 'Manufacturing',
-    'description': """
-* Adds `Reference` field in BOM line (expected to be used to keep mapping reference for parts in circuit diagram).
-    """,
-    'author': 'Rooms For (Hong Kong) Limited T/A OSCG',
-    'license': 'AGPL-3',
-    'depends': ["mrp"],
-    'data': [
-        'mrp_view.xml',
-    ],
-    'installable': True,
-    'application': False,
-    'auto_install': False,
-}
+from odoo import models, fields, api, _
+
+
+class MrpBomLine(models.Model):
+    _inherit = 'mrp.bom.line'
+
+    ref = fields.Char('Reference Number')

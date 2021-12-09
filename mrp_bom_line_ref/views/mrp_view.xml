@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
 	    <record id="mrp_bom_form_view_z160530" model="ir.ui.view">
@@ -13,6 +13,7 @@
             </field>
         </record>
 
+        <!-- No Bom line tree view in 12.0
         <record id="mrp_bom_line_tree_view_z160610" model="ir.ui.view">
             <field name="model">mrp.bom.line</field>
             <field name="inherit_id" ref="mrp.mrp_bom_line_tree_view"/>
@@ -23,6 +24,17 @@
                 </xpath>
             </field>
         </record>
+        -->
+
+        <record id="mrp_bom_line_form_view_z" model="ir.ui.view">
+            <field name="model">mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_line_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="ref"/>
+                </xpath>
+            </field>
+        </record>
 
     </data>
-</openerp>
+</odoo>
