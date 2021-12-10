@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-26 04:41+0000\n"
-"PO-Revision-Date: 2014-10-26 04:41+0000\n"
+"POT-Creation-Date: 2021-12-09 10:10+0000\n"
+"PO-Revision-Date: 2021-12-09 10:10+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,13 +16,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: pos_receipt_product_name
-#: field:product.template,pos_receipt_name:0
+#: model:ir.model.fields,field_description:pos_receipt_product_name.field_product_product__pos_receipt_name
+#: model:ir.model.fields,field_description:pos_receipt_product_name.field_product_template__pos_receipt_name
 msgid "POS Receipt Name"
 msgstr "POSレシート表示名"
 
 #. module: pos_receipt_product_name
 #: model:ir.model,name:pos_receipt_product_name.model_product_template
 msgid "Product Template"
-msgstr "製品テンプレート"
-
-
+msgstr "プロダクトテンプレート"
