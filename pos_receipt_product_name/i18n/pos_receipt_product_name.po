@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_receipt_product_name
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-09 10:10+0000\n"
+"PO-Revision-Date: 2021-12-09 10:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_receipt_product_name
+#: model:ir.model.fields,field_description:pos_receipt_product_name.field_product_product__pos_receipt_name
+#: model:ir.model.fields,field_description:pos_receipt_product_name.field_product_template__pos_receipt_name
+msgid "POS Receipt Name"
+msgstr ""
+
+#. module: pos_receipt_product_name
+#: model:ir.model,name:pos_receipt_product_name.model_product_template
+msgid "Product Template"
+msgstr ""
